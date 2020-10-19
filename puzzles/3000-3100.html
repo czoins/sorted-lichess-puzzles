@@ -19,6 +19,24 @@ td, th {
   padding: 8px;
 }
 
+@media only screen and (max-width: 480px) {
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout:fixed;
+        display: block;
+    }
+    td, th {
+        text-align: center;
+        border: 1px solid #ededed;
+        padding: 6px;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        word-wrap: break-word;
+    }
+}
+
 a {font-size: 24px; color: #b58863; font-family: arial, sans-serif;}
 a:visited {color:grey;}
 
