@@ -5,8 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.7">
 <style>
 body {
-  background-color: #edebe9;
+  --bkg-color: white;
+  --title-link: #b58863;
+  --rating: #f0d9b5;
+  --border: #ededed;
 }
+body.dark-theme {
+  --bkg-color: #3B3B3B;
+  --title-link: #B59B89;
+  --rating: #DACBB5;
+  --border: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --bkg-color: #3B3B3B;
+    --title-link: #B59B89;
+    --rating: #DACBB5;
+    --border: #121212;
+  }
+  body.light-theme {
+    --bkg-color: white;
+    --title-link: #b58863;
+    --rating: #f0d9b5;
+    --border: #ededed;
+  }
+}
+
+body {
+  background-color: var(--bkg-color);
+}
+
+.btn-toggle {
+  filter: invert(1);
+}
+
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -15,7 +50,7 @@ table {
 
 td, th {
   text-align: left;
-  border: 1px solid #ededed;
+  border: 1px solid var(--border);
   padding: 8px;
 }
 
@@ -29,7 +64,7 @@ td, th {
     }
     td, th {
         text-align: center;
-        border: 1px solid #ededed;
+        border: 1px solid var(--border);
         padding: 6px;
         overflow: hidden; 
         text-overflow: ellipsis; 
@@ -37,25 +72,52 @@ td, th {
     }
 }
 
-a {font-size: 24px; color: #b58863; font-family: arial, sans-serif;}
+a {font-size: 24px; color: var(--title-link); font-family: arial, sans-serif;}
 a:visited {color:grey;}
 
 </style>
 </head>
 <body>
 
-<h1 style="text-align: center;"><span style="color: #b58863;font-family: arial, sans-serif;"><strong>Puzzles: 3000-3100</strong></span></h1>
+<input align="right" type="image" class="btn-toggle" src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-48.png">
+<h1 style="text-align: center;"><span style="color: var(--title-link);font-family: arial, sans-serif;"><strong>Puzzles: 3000-3100</strong></span></h1>
 <p>&nbsp;</p>
 
 <table style="margin-left:auto;margin-right:auto;">
   <tr>
-    <th><h2><span style="color: #f0d9b5;font-family: arial, sans-serif;">Link</span></h2></th>
-    <th><h2><span style="color: #f0d9b5;font-family: arial, sans-serif;">Rating</span></h2></th>
+    <th><h2><span style="color: var(--rating);font-family: arial, sans-serif;">Link</span></h2></th>
+    <th><h2><span style="color: var(--rating);font-family: arial, sans-serif;">Rating</span></h2></th>
   </tr>  <tr>
     <td><a href="https://lichess.org/training/125224" style="text-decoration:none">https://lichess.org/training/125224</a></td>
-    <td><span style="color: #f0d9b5;font-size: 24px;font-family: arial, sans-serif;">3051</span></td>
+    <td><span style="color: var(--rating);font-size: 24px;font-family: arial, sans-serif;">3051</span></td>
   </tr>
 </table>
 
+<script>
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+</script>   
 </body>
 </html>
