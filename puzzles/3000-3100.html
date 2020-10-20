@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Puzzles: 3000-3100</title>
-<meta name="viewport" content="width=device-width; height=device-height; initial-scale=0.7; minimum-scale=0.7; maximum-scale=0.7; user-scalable=0;">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   --bkg-color: white;
@@ -35,62 +35,88 @@ body.dark-theme {
 
 body {
   background-color: var(--bkg-color);
+  font-family: "arial", sans-serif;
+  line-height: 1.25;
 }
 
 .btn-toggle {
   filter: invert(1);
 }
 
-
 table {
-  font-family: arial, sans-serif;
+  <!-- border: 1px solid var(--border); -->
   border-collapse: collapse;
+  margin: 0;
+  padding: 0;
   width: 30%;
+  table-layout: fixed;
 }
 
-td, th {
-  text-align: left;
+table caption {
+  font-size: 1.75em;
+  color: var(--title-link);
+  margin: .5em 0 1.45em;
+  caption-side: top;
+  text-align: center;
+  <!-- text-transform: uppercase; -->
+}
+
+table tr {
   border: 1px solid var(--border);
-  padding: 8px;
+  padding: .35em;
 }
 
-@media only screen and (max-width: 480px) {
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-        table-layout:fixed;
-        display: block;
-    }
-    td, th {
-        text-align: center;
-        border: 1px solid var(--border);
-        padding: 6px;
-        overflow: hidden; 
-        text-overflow: ellipsis; 
-        word-wrap: break-word;
-    }
+table th,
+table td {
+  padding: .525em;
+  text-align: center;
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+  <!-- border: 1px solid var(--border); -->
+  overflow: hidden;
 }
 
-a {font-size: 24px; color: var(--title-link); font-family: arial, sans-serif;}
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rating);
+}
+
+@media screen and (max-width: 600px) {
+  table {
+  <!-- border: 1px solid var(--border); -->
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  }
+}
+
+a {color: var(--title-link);}
 a:visited {color:grey;}
 
 </style>
 </head>
 <body>
 
-<input align="right" type="image" class="btn-toggle" src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-48.png">
-<h1 style="text-align: center;"><span style="color: var(--title-link);font-family: arial, sans-serif;"><strong>Puzzles: 3000-3100</strong></span></h1>
-<p>&nbsp;</p>
+<input align="right" type="image" class="btn-toggle" src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-32.png">
 
 <table style="margin-left:auto;margin-right:auto;">
+  <caption><strong>Puzzles: 3000-3100</strong></caption>
+  <thead>
   <tr>
-    <th><h2><span style="color: var(--rating);font-family: arial, sans-serif;">Link</span></h2></th>
-    <th><h2><span style="color: var(--rating);font-family: arial, sans-serif;">Rating</span></h2></th>
-  </tr>  <tr>
-    <td><a href="https://lichess.org/training/125224" style="text-decoration:none">https://lichess.org/training/125224</a></td>
-    <td><span style="color: var(--rating);font-size: 24px;font-family: arial, sans-serif;">3051</span></td>
+    <th scope="col">Puzzle</th>
+    <th scope="col">Rating</th>
   </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/125224" style="text-decoration:none">125224</a></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">3021</span></td>
+  </tr>
+  <tbody>
 </table>
 
 <script>
