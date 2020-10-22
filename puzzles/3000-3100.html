@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  --bkg-color: white;
+  --bkg-color: #fcfcfc;
   --title-link: #b58863;
-  --rating: #f0d9b5;
+  --rating: #ecd0a3;
   --border: #ededed;
 }
 body.dark-theme {
@@ -26,9 +26,9 @@ body.dark-theme {
     --border: #121212;
   }
   body.light-theme {
-    --bkg-color: white;
+    --bkg-color: #fcfcfc;
     --title-link: #b58863;
-    --rating: #f0d9b5;
+    --rating: #ecd0a3;
     --border: #ededed;
   }
 }
@@ -48,7 +48,7 @@ table {
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-  width: 30%;
+  width: 50%;
   table-layout: fixed;
 }
 
@@ -62,7 +62,7 @@ table caption {
 }
 
 table tr {
-  border: 1px solid var(--border);
+  <!-- border: 1px solid var(--border); -->
   padding: .35em;
 }
 
@@ -97,25 +97,24 @@ table th {
 a {color: var(--title-link);}
 a:visited {color:grey;}
 
+::placeholder {color: var(--rating)}
+
 </style>
 </head>
 <body>
 
 <input align="right" type="image" class="btn-toggle" src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-32.png">
 
-<table style="margin-left:auto;margin-right:auto;">
-  <caption><strong>Puzzles: 3000-3100</strong></caption>
+<table id="data" style="margin-left:auto;margin-right:auto;">
+  <caption><strong>Puzzles: 3000-3100</strong><br><input placeholder="Minimum played..." style="background-color: var(--bkg-color); color: var(--rating); width: 40%; border:1px solid var(--rating); padding:2px 2px 2px 2px" align="left" type="text" id="min" name="min"><button style="background-color: var(--bkg-color); color: var(--rating); border:1px solid var(--rating); padding:2px 2px 2px 2px; font-weight: bold" id="in">Search</button></caption>
   <thead>
   <tr>
     <th scope="col">Puzzle</th>
+    <th scope="col">Played</th>
     <th scope="col">Rating</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td data-label="Puzzle"><a href="https://lichess.org/training/125224" style="text-decoration:none">125224</a></td>
-    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">3021</span></td>
-  </tr>
   <tbody>
 </table>
 
@@ -145,5 +144,30 @@ btn.addEventListener("click", function () {
   localStorage.setItem("theme", theme);
 });
 </script>   
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script>
+$('#in').click(function() {
+   var min = parseInt( $('#min').val().replace(",",""), 10 );
+   $('#data tbody tr').each(function() {
+     var played = parseFloat( $('td:eq(1)', this).text().replace(",","") ) || 0; 
+     if ((isNaN( min )) || ( min <= played )) {
+        $(this).show()
+     } else {
+        $(this).hide()
+     }   
+   })
+});
+</script>
+<script>
+var input = document.getElementById("min");
+input.addEventListener("keyup", function(event) {
+if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("in").click();
+    }
+});
+</script>
+
 </body>
 </html>
