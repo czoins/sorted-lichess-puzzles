@@ -1,36 +1,2187 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 <head>
-<title>Site Maintenance</title>
+<title>Puzzles: 1100-1200</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<style>
-  body { text-align: center; padding: 10px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: auto; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
-<body>
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment.</p>
-    </div>
-</article>
-</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120382593-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<script type="text/javascript">
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://sortedchess.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/sortedchess.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+  gtag('config', 'UA-120382593-4');
 </script>
-<noscript><p><img src="https://sortedchess.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<style>
+body {
+  --bkg-color: #fcfcfc;
+  --title-link: #b58863;
+  --rating: #ecd0a3;
+  --border: #ededed;
+}
+body.dark-theme {
+  --bkg-color: #3B3B3B;
+  --title-link: #B59B89;
+  --rating: #DACBB5;
+  --border: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --bkg-color: #3B3B3B;
+    --title-link: #B59B89;
+    --rating: #DACBB5;
+    --border: #121212;
+  }
+  body.light-theme {
+    --bkg-color: #fcfcfc;
+    --title-link: #b58863;
+    --rating: #ecd0a3;
+    --border: #ededed;
+  }
+}
+
+body {
+  background-color: var(--bkg-color);
+  font-family: "arial", sans-serif;
+  line-height: 1.25;
+}
+
+.btn-toggle {
+  filter: invert(1);
+}
+
+table {
+  <!-- border: 1px solid var(--border); -->
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.75em;
+  color: var(--title-link);
+  margin: .5em 0 1.45em;
+  caption-side: top;
+  text-align: center;
+  <!-- text-transform: uppercase; -->
+}
+
+table tr {
+  <!-- border: 1px solid var(--border); -->
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .525em;
+  text-align: center;
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+  <!-- border: 1px solid var(--border); -->
+  overflow: hidden;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rating);
+}
+
+@media screen and (max-width: 600px) {
+  table {
+  <!-- border: 1px solid var(--border); -->
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  }
+}
+
+a {color: var(--title-link);}
+a:visited {color:grey;}
+
+::placeholder {color: var(--rating)}
+
+</style>
+</head>
+<body>
+
+<input align="right" type="image" class="btn-toggle" src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-32.png">
+
+<table id="data" style="margin-left:auto;margin-right:auto;">
+  <caption><strong>Puzzles: 1100-1200</strong><br><input placeholder="Minimum played..." style="background-color: var(--bkg-color); color: var(--rating); width: 40%; border:1px solid var(--rating); padding:2px 2px 2px 2px" align="left" type="text" id="min" name="min"><button style="background-color: var(--bkg-color); color: var(--rating); border:1px solid var(--rating); padding:2px 2px 2px 2px; font-weight: bold" id="in">Search</button></caption>
+  <thead>
+  <tr>
+    <th scope="col">Puzzle</th>
+    <th scope="col">Played</th>
+    <th scope="col">Rating</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VnKA" target="_blank" style="text-decoration:none">0VnKA</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1100</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ox60" target="_blank" style="text-decoration:none">0ox60</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1100</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/04Lt2" target="_blank" style="text-decoration:none">04Lt2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">33</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1101</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0RkkV" target="_blank" style="text-decoration:none">0RkkV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">86</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1101</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Rlfi" target="_blank" style="text-decoration:none">0Rlfi</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">12</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1102</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0X0QD" target="_blank" style="text-decoration:none">0X0QD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">88</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1102</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0iajT" target="_blank" style="text-decoration:none">0iajT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1102</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0kh2Q" target="_blank" style="text-decoration:none">0kh2Q</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">35</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1102</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/04yM8" target="_blank" style="text-decoration:none">04yM8</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">70</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1103</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0RSEl" target="_blank" style="text-decoration:none">0RSEl</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">16</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1103</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0dWcz" target="_blank" style="text-decoration:none">0dWcz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1103</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0FhN7" target="_blank" style="text-decoration:none">0FhN7</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1105</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0SNQ4" target="_blank" style="text-decoration:none">0SNQ4</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1105</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UJLH" target="_blank" style="text-decoration:none">0UJLH</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1105</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/01VY5" target="_blank" style="text-decoration:none">01VY5</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">20</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1106</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Cl6c" target="_blank" style="text-decoration:none">0Cl6c</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">67</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1106</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0KTRY" target="_blank" style="text-decoration:none">0KTRY</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">12</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1106</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hnyE" target="_blank" style="text-decoration:none">0hnyE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1106</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VF5U" target="_blank" style="text-decoration:none">0VF5U</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">20</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1107</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0beZo" target="_blank" style="text-decoration:none">0beZo</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1107</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0s5Ez" target="_blank" style="text-decoration:none">0s5Ez</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1107</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/07Q0w" target="_blank" style="text-decoration:none">07Q0w</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1108</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0DSu9" target="_blank" style="text-decoration:none">0DSu9</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1108</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0HwGS" target="_blank" style="text-decoration:none">0HwGS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1108</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0PwIE" target="_blank" style="text-decoration:none">0PwIE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1108</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0pbQN" target="_blank" style="text-decoration:none">0pbQN</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1108</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/08Hn0" target="_blank" style="text-decoration:none">08Hn0</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">16</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1109</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0IquZ" target="_blank" style="text-decoration:none">0IquZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1109</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0mn8M" target="_blank" style="text-decoration:none">0mn8M</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">18</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1109</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nK0e" target="_blank" style="text-decoration:none">0nK0e</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">51</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1109</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0qrk6" target="_blank" style="text-decoration:none">0qrk6</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1109</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0vD8E" target="_blank" style="text-decoration:none">0vD8E</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1109</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0PQJu" target="_blank" style="text-decoration:none">0PQJu</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">41</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1110</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VJ42" target="_blank" style="text-decoration:none">0VJ42</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1111</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0cU1q" target="_blank" style="text-decoration:none">0cU1q</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">29</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1111</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ited" target="_blank" style="text-decoration:none">0ited</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1111</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ke1K" target="_blank" style="text-decoration:none">0ke1K</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">54</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1111</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0qRRd" target="_blank" style="text-decoration:none">0qRRd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1111</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0O48L" target="_blank" style="text-decoration:none">0O48L</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1112</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0gFLa" target="_blank" style="text-decoration:none">0gFLa</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">65</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1112</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0DdGz" target="_blank" style="text-decoration:none">0DdGz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">51</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1113</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0KkDa" target="_blank" style="text-decoration:none">0KkDa</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1113</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Nkpj" target="_blank" style="text-decoration:none">0Nkpj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1113</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0boAW" target="_blank" style="text-decoration:none">0boAW</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1113</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0j2VD" target="_blank" style="text-decoration:none">0j2VD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1113</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0SREi" target="_blank" style="text-decoration:none">0SREi</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1114</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hJRV" target="_blank" style="text-decoration:none">0hJRV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1114</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/01Pjd" target="_blank" style="text-decoration:none">01Pjd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1115</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Axtk" target="_blank" style="text-decoration:none">0Axtk</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1115</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0EwXO" target="_blank" style="text-decoration:none">0EwXO</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">49</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1115</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YApH" target="_blank" style="text-decoration:none">0YApH</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1115</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0aVRa" target="_blank" style="text-decoration:none">0aVRa</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1115</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0q22k" target="_blank" style="text-decoration:none">0q22k</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">41</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1115</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0G9Yj" target="_blank" style="text-decoration:none">0G9Yj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">83</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1116</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/09O8Q" target="_blank" style="text-decoration:none">09O8Q</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1117</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0KbHK" target="_blank" style="text-decoration:none">0KbHK</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1117</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0LrFo" target="_blank" style="text-decoration:none">0LrFo</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1117</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mgfs" target="_blank" style="text-decoration:none">0Mgfs</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1117</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UfIV" target="_blank" style="text-decoration:none">0UfIV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1117</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0e5x4" target="_blank" style="text-decoration:none">0e5x4</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">75</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1117</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0AhvP" target="_blank" style="text-decoration:none">0AhvP</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">38</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0TjzF" target="_blank" style="text-decoration:none">0TjzF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">20</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0XCPu" target="_blank" style="text-decoration:none">0XCPu</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ze51" target="_blank" style="text-decoration:none">0Ze51</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0bEEW" target="_blank" style="text-decoration:none">0bEEW</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hDhx" target="_blank" style="text-decoration:none">0hDhx</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0jGKd" target="_blank" style="text-decoration:none">0jGKd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">29</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uXnw" target="_blank" style="text-decoration:none">0uXnw</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1118</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0lpyr" target="_blank" style="text-decoration:none">0lpyr</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">26</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1119</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/09D4s" target="_blank" style="text-decoration:none">09D4s</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1120</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hxmk" target="_blank" style="text-decoration:none">0hxmk</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1120</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0iTCJ" target="_blank" style="text-decoration:none">0iTCJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">48</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1120</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YHvv" target="_blank" style="text-decoration:none">0YHvv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">86</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1121</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZDZC" target="_blank" style="text-decoration:none">0ZDZC</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1121</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0sc0w" target="_blank" style="text-decoration:none">0sc0w</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">23</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1121</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uT46" target="_blank" style="text-decoration:none">0uT46</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1122</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03E3Y" target="_blank" style="text-decoration:none">03E3Y</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1123</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZeC2" target="_blank" style="text-decoration:none">0ZeC2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1123</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0e6r2" target="_blank" style="text-decoration:none">0e6r2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">59</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1124</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nF8f" target="_blank" style="text-decoration:none">0nF8f</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1124</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uTB0" target="_blank" style="text-decoration:none">0uTB0</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">57</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1124</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0EaUM" target="_blank" style="text-decoration:none">0EaUM</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">27</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1125</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0FfBg" target="_blank" style="text-decoration:none">0FfBg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1126</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Q90r" target="_blank" style="text-decoration:none">0Q90r</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1126</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0czGw" target="_blank" style="text-decoration:none">0czGw</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1126</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/01FXF" target="_blank" style="text-decoration:none">01FXF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0I4nx" target="_blank" style="text-decoration:none">0I4nx</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MVAE" target="_blank" style="text-decoration:none">0MVAE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">17</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mm4w" target="_blank" style="text-decoration:none">0Mm4w</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YTnv" target="_blank" style="text-decoration:none">0YTnv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">59</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZS17" target="_blank" style="text-decoration:none">0ZS17</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0bI26" target="_blank" style="text-decoration:none">0bI26</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hviO" target="_blank" style="text-decoration:none">0hviO</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nNS2" target="_blank" style="text-decoration:none">0nNS2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1127</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UdM8" target="_blank" style="text-decoration:none">0UdM8</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1128</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VRly" target="_blank" style="text-decoration:none">0VRly</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1128</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0gAQ4" target="_blank" style="text-decoration:none">0gAQ4</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">74</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1128</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03gLT" target="_blank" style="text-decoration:none">03gLT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/04v8l" target="_blank" style="text-decoration:none">04v8l</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/09FV2" target="_blank" style="text-decoration:none">09FV2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">66</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BAWv" target="_blank" style="text-decoration:none">0BAWv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">16</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0F5FS" target="_blank" style="text-decoration:none">0F5FS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Gj6h" target="_blank" style="text-decoration:none">0Gj6h</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0crzC" target="_blank" style="text-decoration:none">0crzC</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1129</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0T0YQ" target="_blank" style="text-decoration:none">0T0YQ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1130</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Turz" target="_blank" style="text-decoration:none">0Turz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1130</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00kRi" target="_blank" style="text-decoration:none">00kRi</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">44</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1131</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BlKv" target="_blank" style="text-decoration:none">0BlKv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1131</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0EL7N" target="_blank" style="text-decoration:none">0EL7N</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1131</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MKHz" target="_blank" style="text-decoration:none">0MKHz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1131</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Qf1x" target="_blank" style="text-decoration:none">0Qf1x</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1131</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0kd85" target="_blank" style="text-decoration:none">0kd85</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">27</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1131</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BhWF" target="_blank" style="text-decoration:none">0BhWF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">28</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1132</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Tw4r" target="_blank" style="text-decoration:none">0Tw4r</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">35</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1132</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YulJ" target="_blank" style="text-decoration:none">0YulJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">73</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1132</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06Ouo" target="_blank" style="text-decoration:none">06Ouo</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">85</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1133</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0OAuF" target="_blank" style="text-decoration:none">0OAuF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1133</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0U3jS" target="_blank" style="text-decoration:none">0U3jS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1133</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0mKwI" target="_blank" style="text-decoration:none">0mKwI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">18</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1133</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nYxU" target="_blank" style="text-decoration:none">0nYxU</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1133</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02COQ" target="_blank" style="text-decoration:none">02COQ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">50</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02j51" target="_blank" style="text-decoration:none">02j51</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0G9wd" target="_blank" style="text-decoration:none">0G9wd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0TRcm" target="_blank" style="text-decoration:none">0TRcm</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">66</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ffvj" target="_blank" style="text-decoration:none">0ffvj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">82</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hU8o" target="_blank" style="text-decoration:none">0hU8o</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0tGBR" target="_blank" style="text-decoration:none">0tGBR</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1134</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0K2Nf" target="_blank" style="text-decoration:none">0K2Nf</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1135</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03eIz" target="_blank" style="text-decoration:none">03eIz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">66</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1136</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03IxV" target="_blank" style="text-decoration:none">03IxV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1137</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0PpIJ" target="_blank" style="text-decoration:none">0PpIJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1137</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0l914" target="_blank" style="text-decoration:none">0l914</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">47</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1137</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0raFT" target="_blank" style="text-decoration:none">0raFT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1137</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0QCJL" target="_blank" style="text-decoration:none">0QCJL</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1138</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0s3up" target="_blank" style="text-decoration:none">0s3up</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">25</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1138</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0IW8Q" target="_blank" style="text-decoration:none">0IW8Q</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1139</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0LLK1" target="_blank" style="text-decoration:none">0LLK1</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">19</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1139</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0PQep" target="_blank" style="text-decoration:none">0PQep</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">28</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1139</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Wcv2" target="_blank" style="text-decoration:none">0Wcv2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1139</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ePOF" target="_blank" style="text-decoration:none">0ePOF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1139</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0r0Bg" target="_blank" style="text-decoration:none">0r0Bg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">17</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1139</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00KYE" target="_blank" style="text-decoration:none">00KYE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">94</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1140</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02PuU" target="_blank" style="text-decoration:none">02PuU</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1140</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0NUAd" target="_blank" style="text-decoration:none">0NUAd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1140</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0iilL" target="_blank" style="text-decoration:none">0iilL</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1140</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/04J3X" target="_blank" style="text-decoration:none">04J3X</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">68</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BlBd" target="_blank" style="text-decoration:none">0BlBd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0FqMl" target="_blank" style="text-decoration:none">0FqMl</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">57</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0dS2p" target="_blank" style="text-decoration:none">0dS2p</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">78</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0khVD" target="_blank" style="text-decoration:none">0khVD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">86</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0o1Se" target="_blank" style="text-decoration:none">0o1Se</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0tFmZ" target="_blank" style="text-decoration:none">0tFmZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1141</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0FmyT" target="_blank" style="text-decoration:none">0FmyT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">61</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1142</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0aodV" target="_blank" style="text-decoration:none">0aodV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1142</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03XDF" target="_blank" style="text-decoration:none">03XDF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1143</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06scF" target="_blank" style="text-decoration:none">06scF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1143</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/07GkI" target="_blank" style="text-decoration:none">07GkI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1143</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hsLM" target="_blank" style="text-decoration:none">0hsLM</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">49</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1143</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0tRtc" target="_blank" style="text-decoration:none">0tRtc</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1143</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03NKN" target="_blank" style="text-decoration:none">03NKN</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1144</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0pSnt" target="_blank" style="text-decoration:none">0pSnt</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1144</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BJ4k" target="_blank" style="text-decoration:none">0BJ4k</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1145</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Z5KJ" target="_blank" style="text-decoration:none">0Z5KJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1145</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0kiuo" target="_blank" style="text-decoration:none">0kiuo</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">60</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1145</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0mtyu" target="_blank" style="text-decoration:none">0mtyu</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1145</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uGK6" target="_blank" style="text-decoration:none">0uGK6</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">50</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1145</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/07bVG" target="_blank" style="text-decoration:none">07bVG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/09XDA" target="_blank" style="text-decoration:none">09XDA</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">17</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0gqON" target="_blank" style="text-decoration:none">0gqON</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">29</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0iCdU" target="_blank" style="text-decoration:none">0iCdU</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0k9FJ" target="_blank" style="text-decoration:none">0k9FJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">47</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nTMX" target="_blank" style="text-decoration:none">0nTMX</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uAWs" target="_blank" style="text-decoration:none">0uAWs</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1146</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/08kBE" target="_blank" style="text-decoration:none">08kBE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1147</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ccfb" target="_blank" style="text-decoration:none">0Ccfb</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">38</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1147</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mi8V" target="_blank" style="text-decoration:none">0Mi8V</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1147</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0QSvM" target="_blank" style="text-decoration:none">0QSvM</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1147</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06CIk" target="_blank" style="text-decoration:none">06CIk</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0I1kZ" target="_blank" style="text-decoration:none">0I1kZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0I3bg" target="_blank" style="text-decoration:none">0I3bg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Scwy" target="_blank" style="text-decoration:none">0Scwy</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0T7DG" target="_blank" style="text-decoration:none">0T7DG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZWhG" target="_blank" style="text-decoration:none">0ZWhG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0aFld" target="_blank" style="text-decoration:none">0aFld</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0jDaf" target="_blank" style="text-decoration:none">0jDaf</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0pQ4q" target="_blank" style="text-decoration:none">0pQ4q</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">29</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0urpn" target="_blank" style="text-decoration:none">0urpn</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">66</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1148</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0AN08" target="_blank" style="text-decoration:none">0AN08</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1149</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0GkkT" target="_blank" style="text-decoration:none">0GkkT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1149</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/07rnG" target="_blank" style="text-decoration:none">07rnG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1150</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0TcaS" target="_blank" style="text-decoration:none">0TcaS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1150</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZRFh" target="_blank" style="text-decoration:none">0ZRFh</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1150</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00wYl" target="_blank" style="text-decoration:none">00wYl</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">67</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1151</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0OMmT" target="_blank" style="text-decoration:none">0OMmT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1151</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0qRXZ" target="_blank" style="text-decoration:none">0qRXZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1151</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0sCQA" target="_blank" style="text-decoration:none">0sCQA</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1151</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/07qNu" target="_blank" style="text-decoration:none">07qNu</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1152</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/08UnN" target="_blank" style="text-decoration:none">08UnN</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1152</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0LFYO" target="_blank" style="text-decoration:none">0LFYO</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1152</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UbZy" target="_blank" style="text-decoration:none">0UbZy</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1152</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0a0rS" target="_blank" style="text-decoration:none">0a0rS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1152</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0070J" target="_blank" style="text-decoration:none">0070J</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">68</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1153</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/01KQc" target="_blank" style="text-decoration:none">01KQc</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1153</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/07dw2" target="_blank" style="text-decoration:none">07dw2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1153</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0D6AK" target="_blank" style="text-decoration:none">0D6AK</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1153</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0me7U" target="_blank" style="text-decoration:none">0me7U</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1153</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/095vB" target="_blank" style="text-decoration:none">095vB</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0V6Zv" target="_blank" style="text-decoration:none">0V6Zv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0WNZX" target="_blank" style="text-decoration:none">0WNZX</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0XrMV" target="_blank" style="text-decoration:none">0XrMV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0asSm" target="_blank" style="text-decoration:none">0asSm</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">60</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0cFcC" target="_blank" style="text-decoration:none">0cFcC</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0fLNG" target="_blank" style="text-decoration:none">0fLNG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1154</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02ZJA" target="_blank" style="text-decoration:none">02ZJA</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">79</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1155</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03Lde" target="_blank" style="text-decoration:none">03Lde</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1155</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Bya9" target="_blank" style="text-decoration:none">0Bya9</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">89</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1155</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0SyvH" target="_blank" style="text-decoration:none">0SyvH</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">12</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1155</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0azF3" target="_blank" style="text-decoration:none">0azF3</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1155</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0egrZ" target="_blank" style="text-decoration:none">0egrZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1155</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02SG5" target="_blank" style="text-decoration:none">02SG5</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1156</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Dmqx" target="_blank" style="text-decoration:none">0Dmqx</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">32</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1156</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/016nI" target="_blank" style="text-decoration:none">016nI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">43</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1157</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0M0ee" target="_blank" style="text-decoration:none">0M0ee</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">28</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1157</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mg5a" target="_blank" style="text-decoration:none">0Mg5a</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">71</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1157</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0m66U" target="_blank" style="text-decoration:none">0m66U</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1157</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00nCh" target="_blank" style="text-decoration:none">00nCh</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1158</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VPl4" target="_blank" style="text-decoration:none">0VPl4</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1158</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0kNzg" target="_blank" style="text-decoration:none">0kNzg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1158</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ehfe" target="_blank" style="text-decoration:none">0Ehfe</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1159</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0dTLS" target="_blank" style="text-decoration:none">0dTLS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1160</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0P51N" target="_blank" style="text-decoration:none">0P51N</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1161</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0WgUJ" target="_blank" style="text-decoration:none">0WgUJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1161</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0t6nj" target="_blank" style="text-decoration:none">0t6nj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1161</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0tWrp" target="_blank" style="text-decoration:none">0tWrp</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">48</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1161</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/019DY" target="_blank" style="text-decoration:none">019DY</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1162</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Cv7E" target="_blank" style="text-decoration:none">0Cv7E</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">42</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1162</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0LDqK" target="_blank" style="text-decoration:none">0LDqK</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">16</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1162</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0eair" target="_blank" style="text-decoration:none">0eair</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">24</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1162</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ijZj" target="_blank" style="text-decoration:none">0ijZj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1162</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0t7e3" target="_blank" style="text-decoration:none">0t7e3</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1162</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Izhl" target="_blank" style="text-decoration:none">0Izhl</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1163</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0mha2" target="_blank" style="text-decoration:none">0mha2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1163</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0sfg3" target="_blank" style="text-decoration:none">0sfg3</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">19</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1163</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Nw7z" target="_blank" style="text-decoration:none">0Nw7z</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">46</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1164</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0sw34" target="_blank" style="text-decoration:none">0sw34</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1164</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Jri7" target="_blank" style="text-decoration:none">0Jri7</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">112</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1165</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0foEZ" target="_blank" style="text-decoration:none">0foEZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">62</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1165</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VAgM" target="_blank" style="text-decoration:none">0VAgM</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1166</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02Hq2" target="_blank" style="text-decoration:none">02Hq2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1167</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0hcu3" target="_blank" style="text-decoration:none">0hcu3</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1167</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uPyz" target="_blank" style="text-decoration:none">0uPyz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1167</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/05Fin" target="_blank" style="text-decoration:none">05Fin</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1168</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ILdS" target="_blank" style="text-decoration:none">0ILdS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">42</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1168</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ldto" target="_blank" style="text-decoration:none">0Ldto</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1168</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Wgz1" target="_blank" style="text-decoration:none">0Wgz1</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">44</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1168</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0AxXM" target="_blank" style="text-decoration:none">0AxXM</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1169</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00Ozz" target="_blank" style="text-decoration:none">00Ozz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1170</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/050MV" target="_blank" style="text-decoration:none">050MV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1170</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0EJzG" target="_blank" style="text-decoration:none">0EJzG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1170</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0eJjI" target="_blank" style="text-decoration:none">0eJjI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">41</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1170</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0lTpE" target="_blank" style="text-decoration:none">0lTpE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1170</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0q4yP" target="_blank" style="text-decoration:none">0q4yP</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">65</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1170</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/09h49" target="_blank" style="text-decoration:none">09h49</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1171</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0WSmq" target="_blank" style="text-decoration:none">0WSmq</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1171</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0bo1a" target="_blank" style="text-decoration:none">0bo1a</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1171</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Vvlg" target="_blank" style="text-decoration:none">0Vvlg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">37</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1172</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0l4wC" target="_blank" style="text-decoration:none">0l4wC</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1172</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BRBz" target="_blank" style="text-decoration:none">0BRBz</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Dcr7" target="_blank" style="text-decoration:none">0Dcr7</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">80</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0EKcD" target="_blank" style="text-decoration:none">0EKcD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0H6pE" target="_blank" style="text-decoration:none">0H6pE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0IinN" target="_blank" style="text-decoration:none">0IinN</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MXyg" target="_blank" style="text-decoration:none">0MXyg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">18</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YbuN" target="_blank" style="text-decoration:none">0YbuN</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">19</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0b0Pd" target="_blank" style="text-decoration:none">0b0Pd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0rFVW" target="_blank" style="text-decoration:none">0rFVW</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">23</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1173</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0jalF" target="_blank" style="text-decoration:none">0jalF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1174</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0rNVj" target="_blank" style="text-decoration:none">0rNVj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1174</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02KS2" target="_blank" style="text-decoration:none">02KS2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">17</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Dqwn" target="_blank" style="text-decoration:none">0Dqwn</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ld4P" target="_blank" style="text-decoration:none">0Ld4P</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MG2K" target="_blank" style="text-decoration:none">0MG2K</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0a8xQ" target="_blank" style="text-decoration:none">0a8xQ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">86</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0bfdk" target="_blank" style="text-decoration:none">0bfdk</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">29</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0tvn7" target="_blank" style="text-decoration:none">0tvn7</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1175</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/04V7o" target="_blank" style="text-decoration:none">04V7o</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1176</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ch4W" target="_blank" style="text-decoration:none">0Ch4W</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1176</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MYww" target="_blank" style="text-decoration:none">0MYww</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1176</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Qjv5" target="_blank" style="text-decoration:none">0Qjv5</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1176</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YL7C" target="_blank" style="text-decoration:none">0YL7C</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1176</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0kF8V" target="_blank" style="text-decoration:none">0kF8V</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1176</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00Fyu" target="_blank" style="text-decoration:none">00Fyu</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1177</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/03iNA" target="_blank" style="text-decoration:none">03iNA</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1177</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mnwj" target="_blank" style="text-decoration:none">0Mnwj</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1177</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0DY5S" target="_blank" style="text-decoration:none">0DY5S</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1178</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UgDm" target="_blank" style="text-decoration:none">0UgDm</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1178</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0VXhd" target="_blank" style="text-decoration:none">0VXhd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1179</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ncGI" target="_blank" style="text-decoration:none">0ncGI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">62</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1179</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ntjd" target="_blank" style="text-decoration:none">0ntjd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1179</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/08bE8" target="_blank" style="text-decoration:none">08bE8</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">51</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1180</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0A1DD" target="_blank" style="text-decoration:none">0A1DD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1180</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0OUs3" target="_blank" style="text-decoration:none">0OUs3</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1180</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/01382" target="_blank" style="text-decoration:none">01382</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1181</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/051q4" target="_blank" style="text-decoration:none">051q4</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1181</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0NXIR" target="_blank" style="text-decoration:none">0NXIR</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">20</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1181</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0RCB2" target="_blank" style="text-decoration:none">0RCB2</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1181</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YogV" target="_blank" style="text-decoration:none">0YogV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1181</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06mLg" target="_blank" style="text-decoration:none">06mLg</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1182</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06xpi" target="_blank" style="text-decoration:none">06xpi</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1182</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0jn26" target="_blank" style="text-decoration:none">0jn26</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1182</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0d8Lw" target="_blank" style="text-decoration:none">0d8Lw</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1183</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0orXC" target="_blank" style="text-decoration:none">0orXC</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1183</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/01NZ8" target="_blank" style="text-decoration:none">01NZ8</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1184</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nZwm" target="_blank" style="text-decoration:none">0nZwm</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1184</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0A4FM" target="_blank" style="text-decoration:none">0A4FM</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Cw0u" target="_blank" style="text-decoration:none">0Cw0u</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0H2EI" target="_blank" style="text-decoration:none">0H2EI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">86</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0LgWV" target="_blank" style="text-decoration:none">0LgWV</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MZPh" target="_blank" style="text-decoration:none">0MZPh</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0NgZW" target="_blank" style="text-decoration:none">0NgZW</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0fKXL" target="_blank" style="text-decoration:none">0fKXL</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0lD0v" target="_blank" style="text-decoration:none">0lD0v</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0rLK8" target="_blank" style="text-decoration:none">0rLK8</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0rp8X" target="_blank" style="text-decoration:none">0rp8X</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1185</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0D4NL" target="_blank" style="text-decoration:none">0D4NL</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">92</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1186</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mg0n" target="_blank" style="text-decoration:none">0Mg0n</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1186</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0k1RR" target="_blank" style="text-decoration:none">0k1RR</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1186</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0gn64" target="_blank" style="text-decoration:none">0gn64</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1187</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0lYj1" target="_blank" style="text-decoration:none">0lYj1</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">17</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1187</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0JwEb" target="_blank" style="text-decoration:none">0JwEb</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1188</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0lMZP" target="_blank" style="text-decoration:none">0lMZP</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1188</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0mTmJ" target="_blank" style="text-decoration:none">0mTmJ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1188</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/04ejR" target="_blank" style="text-decoration:none">04ejR</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1189</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06Ipb" target="_blank" style="text-decoration:none">06Ipb</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">59</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1189</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MOpT" target="_blank" style="text-decoration:none">0MOpT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1189</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0qLxl" target="_blank" style="text-decoration:none">0qLxl</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1189</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/051KC" target="_blank" style="text-decoration:none">051KC</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1190</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/06C3G" target="_blank" style="text-decoration:none">06C3G</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1190</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BEgr" target="_blank" style="text-decoration:none">0BEgr</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1190</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Bg8l" target="_blank" style="text-decoration:none">0Bg8l</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1190</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0U3BE" target="_blank" style="text-decoration:none">0U3BE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">7</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1190</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UIC0" target="_blank" style="text-decoration:none">0UIC0</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">13</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1190</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02lQd" target="_blank" style="text-decoration:none">02lQd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">46</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1191</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Dkg5" target="_blank" style="text-decoration:none">0Dkg5</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">106</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1191</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0OYjd" target="_blank" style="text-decoration:none">0OYjd</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">6</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1191</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0QuQr" target="_blank" style="text-decoration:none">0QuQr</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1191</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ewXH" target="_blank" style="text-decoration:none">0ewXH</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1191</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0gxir" target="_blank" style="text-decoration:none">0gxir</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">31</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1191</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0BdcZ" target="_blank" style="text-decoration:none">0BdcZ</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mcg6" target="_blank" style="text-decoration:none">0Mcg6</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0N25w" target="_blank" style="text-decoration:none">0N25w</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0OdCP" target="_blank" style="text-decoration:none">0OdCP</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0RXfL" target="_blank" style="text-decoration:none">0RXfL</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0UTV6" target="_blank" style="text-decoration:none">0UTV6</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">71</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Uv1G" target="_blank" style="text-decoration:none">0Uv1G</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Wvyv" target="_blank" style="text-decoration:none">0Wvyv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">12</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZEvD" target="_blank" style="text-decoration:none">0ZEvD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0b41O" target="_blank" style="text-decoration:none">0b41O</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">34</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0gS16" target="_blank" style="text-decoration:none">0gS16</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ltmv" target="_blank" style="text-decoration:none">0ltmv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">12</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1192</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/004jl" target="_blank" style="text-decoration:none">004jl</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ILnN" target="_blank" style="text-decoration:none">0ILnN</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">18</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MW7U" target="_blank" style="text-decoration:none">0MW7U</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Mqx3" target="_blank" style="text-decoration:none">0Mqx3</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0X4nI" target="_blank" style="text-decoration:none">0X4nI</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0a9ca" target="_blank" style="text-decoration:none">0a9ca</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0bO7a" target="_blank" style="text-decoration:none">0bO7a</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1193</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0KvhU" target="_blank" style="text-decoration:none">0KvhU</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">65</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1194</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0OX3x" target="_blank" style="text-decoration:none">0OX3x</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1194</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0SiG6" target="_blank" style="text-decoration:none">0SiG6</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1194</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0YXOU" target="_blank" style="text-decoration:none">0YXOU</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">39</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1194</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0clA1" target="_blank" style="text-decoration:none">0clA1</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1194</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00slf" target="_blank" style="text-decoration:none">00slf</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1195</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0mB8o" target="_blank" style="text-decoration:none">0mB8o</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">14</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1195</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/00IWa" target="_blank" style="text-decoration:none">00IWa</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1196</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Txol" target="_blank" style="text-decoration:none">0Txol</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">79</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1196</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ratR" target="_blank" style="text-decoration:none">0ratR</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1196</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0uiCm" target="_blank" style="text-decoration:none">0uiCm</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1196</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0M7d8" target="_blank" style="text-decoration:none">0M7d8</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0QAWq" target="_blank" style="text-decoration:none">0QAWq</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0ZyTR" target="_blank" style="text-decoration:none">0ZyTR</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">42</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0aB54" target="_blank" style="text-decoration:none">0aB54</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">12</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0dP57" target="_blank" style="text-decoration:none">0dP57</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">9</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0j6jt" target="_blank" style="text-decoration:none">0j6jt</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0qS5R" target="_blank" style="text-decoration:none">0qS5R</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">1</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1197</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/071Gu" target="_blank" style="text-decoration:none">071Gu</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">19</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1198</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0IUzE" target="_blank" style="text-decoration:none">0IUzE</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1198</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Ix8d" target="_blank" style="text-decoration:none">0Ix8d</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">18</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1198</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MQAS" target="_blank" style="text-decoration:none">0MQAS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">19</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1198</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0QmlD" target="_blank" style="text-decoration:none">0QmlD</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1198</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0R14g" target="_blank" style="text-decoration:none">0R14g</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1198</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/02VgX" target="_blank" style="text-decoration:none">02VgX</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">10</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/05ZjG" target="_blank" style="text-decoration:none">05ZjG</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">11</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0DtsF" target="_blank" style="text-decoration:none">0DtsF</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">8</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0MOtT" target="_blank" style="text-decoration:none">0MOtT</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">19</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0PRkS" target="_blank" style="text-decoration:none">0PRkS</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">4</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0Qggv" target="_blank" style="text-decoration:none">0Qggv</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">23</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0dSma" target="_blank" style="text-decoration:none">0dSma</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">2</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0l0dc" target="_blank" style="text-decoration:none">0l0dc</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">15</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0nz96" target="_blank" style="text-decoration:none">0nz96</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">5</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tr>
+    <td data-label="Puzzle"><a href="https://lichess.org/training/0pRzt" target="_blank" style="text-decoration:none">0pRzt</a></td>
+    <td data-label="Played"><span style="color: var(--rating);font-family: arial, sans-serif;">3</span></td>
+    <td data-label="Rating"><span style="color: var(--rating);font-family: arial, sans-serif;">1199</span></td>
+  </tr>
+  <tbody>
+</table>
+
+<script>
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+</script>   
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script>
+$('#in').click(function() {
+   var min = parseInt( $('#min').val().replace(",",""), 10 );
+   $('#data tbody tr').each(function() {
+     var played = parseFloat( $('td:eq(1)', this).text().replace(",","") ) || 0; 
+     if ((isNaN( min )) || ( min <= played )) {
+        $(this).show()
+     } else {
+        $(this).hide()
+     }   
+   })
+});
+</script>
+<script>
+var input = document.getElementById("min");
+input.addEventListener("keyup", function(event) {
+if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("in").click();
+    }
+});
+</script>
+
+</body>
+</html>
