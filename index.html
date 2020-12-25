@@ -1,36 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 <head>
-<title>Site Maintenance</title>
+<title>Sorted Lichess Puzzles</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<style>
-  body { text-align: center; padding: 10px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: auto; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
-<body>
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment.</p>
-    </div>
-</article>
-</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120382593-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<script type="text/javascript">
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://sortedchess.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/sortedchess.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+  gtag('config', 'UA-120382593-4');
 </script>
-<noscript><p><img src="https://sortedchess.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<style>
+body {
+  --bkg-color: #fcfcfc;
+  --title-link: #b58863;
+  --rating: #ecd0a3;
+  --border: #ededed;
+}
+body.dark-theme {
+  --bkg-color: #3B3B3B;
+  --title-link: #B59B89;
+  --rating: #DACBB5;
+  --border: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --bkg-color: #3B3B3B;
+    --title-link: #B59B89;
+    --rating: #DACBB5;
+    --border: #121212;
+  }
+  body.light-theme {
+    --bkg-color: #fcfcfc;
+    --title-link: #b58863;
+    --rating: #ecd0a3;
+    --border: #ededed;
+  }
+}
+
+body {
+  background-color: var(--bkg-color);
+  font-family: "arial", sans-serif;
+  line-height: 1.25;
+}
+
+.btn-toggle {
+  filter: invert(1);
+}
+
+a {color: var(--rating); font-family: arial, sans-serif;}
+a:visited {color:grey;}
+</style>
+</head>
+<body>
+
+<input align="right" type="image" class="btn-toggle" src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-32.png">
+<p>&nbsp;</p>
+<h1 style="text-align: center;"><span style="color: var(--title-link);font-family: arial, sans-serif;"><strong>Lichess Puzzles Sorted By Rating(672,849 puzzles)</strong></span></h1>
+<p>&nbsp;</p>
+
+<a href="puzzles/700-800.html" style="text-decoration:none;text-align: center;"><h2>700-800</h2></a>
+<a href="puzzles/800-900.html" style="text-decoration:none;text-align: center;"><h2>800-900</h2></a>
+<a href="puzzles/900-1000.html" style="text-decoration:none;text-align: center;"><h2>900-1000</h2></a>
+<a href="puzzles/1000-1100.html" style="text-decoration:none;text-align: center;"><h2>1000-1100</h2></a>
+<a href="puzzles/1100-1200.html" style="text-decoration:none;text-align: center;"><h2>1100-1200</h2></a>
+<a href="puzzles/1200-1300.html" style="text-decoration:none;text-align: center;"><h2>1200-1300</h2></a>
+<a href="puzzles/1300-1400.html" style="text-decoration:none;text-align: center;"><h2>1300-1400</h2></a>
+<a href="puzzles/1400-1500.html" style="text-decoration:none;text-align: center;"><h2>1400-1500</h2></a>
+<a href="puzzles/1500-1600.html" style="text-decoration:none;text-align: center;"><h2>1500-1600</h2></a>
+<a href="puzzles/1600-1700.html" style="text-decoration:none;text-align: center;"><h2>1600-1700</h2></a>
+<a href="puzzles/1700-1800.html" style="text-decoration:none;text-align: center;"><h2>1700-1800</h2></a>
+<a href="puzzles/1800-1900.html" style="text-decoration:none;text-align: center;"><h2>1800-1900</h2></a>
+<a href="puzzles/1900-2000.html" style="text-decoration:none;text-align: center;"><h2>1900-2000</h2></a>
+<a href="puzzles/2000-2100.html" style="text-decoration:none;text-align: center;"><h2>2000-2100</h2></a>
+<a href="puzzles/2100-2200.html" style="text-decoration:none;text-align: center;"><h2>2100-2200</h2></a>
+<a href="puzzles/2200-2300.html" style="text-decoration:none;text-align: center;"><h2>2200-2300</h2></a>
+<a href="puzzles/2300-2400.html" style="text-decoration:none;text-align: center;"><h2>2300-2400</h2></a>
+<a href="puzzles/2400-2500.html" style="text-decoration:none;text-align: center;"><h2>2400-2500</h2></a>
+<a href="puzzles/2500-2600.html" style="text-decoration:none;text-align: center;"><h2>2500-2600</h2></a>
+<a href="puzzles/2600-2700.html" style="text-decoration:none;text-align: center;"><h2>2600-2700</h2></a>
+<a href="puzzles/2700-2800.html" style="text-decoration:none;text-align: center;"><h2>2700-2800</h2></a>
+<a href="puzzles/2900-3000.html" style="text-decoration:none;text-align: center;"><h2>2900-3000</h2></a>
+<a href="puzzles/3000-3100.html" style="text-decoration:none;text-align: center;"><h2>3000-3100</h2></a>
+
+<script>
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+</script>
+
+</body>
+</html>
